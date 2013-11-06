@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+#unsecure because of an SSL problem. Try to fix
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
