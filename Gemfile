@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby '2.0.0'
 #unsecure because of an SSL problem. Try to fix
 
 gem 'rails', '4.0.1'
