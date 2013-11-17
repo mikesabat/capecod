@@ -9,7 +9,7 @@
 				<p>
 				  <%= @pin.description %>
 				</p>
-				<p><%= @pin.user.try (:email) %></p>
+				<p>Posted by <%= @pin.user.try (:name) %></p>
 
 				<% if @pin.user == current_user %>
 					<%= link_to edit_pin_path(@pin) do %> 
