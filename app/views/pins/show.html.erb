@@ -12,7 +12,10 @@
 				<p><%= @pin.user.try (:email) %></p>
 
 				<% if @pin.user == current_user %>
-					<%= link_to 'Edit', edit_pin_path(@pin) %> 
+					<%= link_to edit_pin_path(@pin) do %> 
+						<span class='glyphicon glyphicon-edit'></span>
+						Edit
+					<% end %>
 				<% end %>
 			</div>
 		</div>
