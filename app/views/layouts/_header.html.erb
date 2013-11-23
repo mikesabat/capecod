@@ -14,23 +14,34 @@
 	  <!-- Collect the nav links, forms, and other content for toggling -->
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 	    <ul class="nav navbar-nav navbar-right">
-	      <li><%= link_to "Home", root_path %></li>
-	      <li><%= link_to "About", about_path %></li> 
+	    
 	      <% if user_signed_in? %>
 	      	<li><%= link_to new_pin_path do %>
 	      		<span class='glyphicon glyphicon-plus'></span> New Pin
 	      		<% end %>
 	      	</li>
-	      	<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-	      	<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li> 
+
+	      	<li class="dropdown">
+        		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Control Panel <b class="caret"></b></a>
+        		<ul class="dropdown-menu">
+          			<li><%= link_to "Home", root_path %></li>
+          			<li><%= link_to "About", about_path %></li>
+          			<li class="divider"></li>
+          			<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+          			<li class="divider"></li>
+          			<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        		</ul>
+      		</li>	      
 	      <% else %>
 	      	<li><%= link_to "Sign In", new_user_session_path %></li> 
+	      	<li><%= link_to "Home", root_path %></li>
+          	<li><%= link_to "About", about_path %></li>
 	      <% end %>
+	      
+	       
 
 	    </ul>
 	  </div><!-- /.navbar-collapse -->
 	</div><!-- /.navbar-container -->
 </nav>
 	
-
-
