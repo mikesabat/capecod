@@ -1,28 +1,18 @@
 == README
+**
+Infinite scrol partially set up from this guide http://christianvarga.com/2013/02/simple-infinite-scroll-with-rails-and-jquery/
+Problems:
+Step 2 - cannot require jquery.inview.min.js
+2nd to last step - cannot figure out how to convert index.js.haml to Javascript
+I can get the 'Load more posts' link to appear, but clicking it does nothing. 
+**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+//
+Try 2 for endless page - using this http://stackoverflow.com/questions/18545769/will-paginate-with-endless-scrolling-rails4?rq=1
+Current Version
+//
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Next:
+Voting system?
+Upload Multiple Pics?
+Stripe Integration
