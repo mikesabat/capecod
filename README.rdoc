@@ -12,6 +12,14 @@ Try 2 for endless page - using this http://stackoverflow.com/questions/18545769/
 Current Version
 //
 
+Stripe Integration - start here http://railsapps.github.io/rails-environment-variables.html
+http://blogs.clogeny.com/stripe-integration-with-rails-application/
+
+1. Adding JS to the layout file - check
+**At Step 6 **
+
+
+
 Next:
 Voting system?
 Upload Multiple Pics?

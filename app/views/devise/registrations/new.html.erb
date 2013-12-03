@@ -8,6 +8,8 @@
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 		  <%= devise_error_messages! %>
 
+		  <%= f.hidden_field :stripe_card_token %>
+
 		  <div class='form-group'>
 		  	<%= f.label :name %>
 		  	<%= f.text_field :name, :autofocus => true, class: 'form-control' %>
@@ -26,6 +28,20 @@
 		  <div>
 		  	<%= f.submit "Sign up", class: 'btn btn-primary' %>
 		  </div>
+<!-- 
+		  Example CC form - it's ugly
+ -->
+		<% if @user.stripe_card_token.present? %>
+			Credit card has been provided.
+		<% else %>
+			<%= label_tag :card_number, "Credit Card Number" %>
+			<%= text_field_tag :card_number, nil, name: nil %>
+			<%= label_tag :card_code, "Security Code on Card (CVV)" %>
+			<%= text_field_tag :card_code, nil, name: nil %>
+			<%= label_tag :card_month, "Card Expiration" %>
+			<%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+			<%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+		<% end %>
 
 		<% end %>
 	</div>
@@ -33,3 +49,17 @@
 		<%= render "devise/shared/links" %>
 	</div>
 </div>
+
+<!-- Stripe "pay"link
+		  	<%= form_tag charges_path do %>
+			  <article>
+			    <label class="amount">
+			      <span>Amount: $5.00</span>
+			    </label>
+			  </article>
+
+			  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
+			          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+			          data-description="A month's subscription"
+			          data-amount="500"></script>
+			<% end %> -->

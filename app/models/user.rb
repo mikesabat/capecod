@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
          has_many :pins
          validates :name, presence: true
+
+         #attr_accessible :stripe_card_token
 end
