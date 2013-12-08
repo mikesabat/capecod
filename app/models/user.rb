@@ -9,7 +9,13 @@ class User < ActiveRecord::Base
          after_create :create_a_customer
 
          def create_a_customer
-         	puts "Creat a Customer Method ran"         	
+         	token = self.stripe_card_token
+         	
+         	customer = Stripe::Customer.create(
+  				:card => token,
+  				:plan => 120,
+  				:email => self.email
+			)       	
          end
 
          
