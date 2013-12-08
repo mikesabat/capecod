@@ -25,24 +25,27 @@
 		  	<%= f.password_field :password, class: 'form-control' %>
 		  </div>	  
 
+		  <% if @user.stripe_card_token.present? %>
+		  	Credit Card is on File
+		  <% else %>
+			  <div class='form-group'>
+			  	<%= label_tag :card_number, "Credit Card Number" %>
+			  	<%= text_field_tag :card_number, nil, name: nil, class: 'form-control' %>
+			  </div>
+
+			  <div class='form-group'>
+			  	<%= label_tag :card_code, "Security Code on Card (CVV)" %>
+				<%= text_field_tag :card_code, nil, name: nil %>
+				<%= label_tag :card_month, "Card Expiration" %>
+				<%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+				<%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+			  </div>
+			  
+		  <% end %>
+
 		  <div>
 		  	<%= f.submit "Sign up", class: 'btn btn-primary' %>
 		  </div>
-<!-- 
-		  Example CC form - it's ugly
- -->
-		<% if @user.stripe_card_token.present? %>
-			Credit card has been provided.
-		<% else %>
-			<%= label_tag :card_number, "Credit Card Number" %>
-			<%= text_field_tag :card_number, nil, name: nil %>
-			<%= label_tag :card_code, "Security Code on Card (CVV)" %>
-			<%= text_field_tag :card_code, nil, name: nil %>
-			<%= label_tag :card_month, "Card Expiration" %>
-			<%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-			<%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
-
-		<% end %>
 
 		<% end %>
 	</div>

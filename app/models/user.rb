@@ -6,6 +6,12 @@ class User < ActiveRecord::Base
 
          has_many :pins
          validates :name, presence: true
+         after_create :create_a_customer
 
-         #attr_accessible :stripe_card_token
+         def create_a_customer
+         	puts "Creat a Customer Method ran"         	
+         end
+
+         
+
 end

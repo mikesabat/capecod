@@ -1,0 +1,16 @@
+Setting up Stripe and Devise - Rails 4 / Ruby 2
+
+Stripe Integration - start here http://railsapps.github.io/rails-environment-variables.html
+http://blogs.clogeny.com/stripe-integration-with-rails-application/
+
+1. Adding JS to the layout file - check
+Is step 4 correct??
+**At Step 6 **
+
+Stripe tutorial*&*&&
+https://stripe.com/docs/tutorials/forms
+1. Double check step 1 - Publishable_Key there?
+
+Use this for the form
+https://stripe.com/docs/tutorials/forms
+
