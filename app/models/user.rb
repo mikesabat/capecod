@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   				:plan => 120,
   				:email => self.email
 			)       	
+			#Need to note that User cc has gone through
          end
 
          

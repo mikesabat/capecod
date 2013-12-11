@@ -14,3 +14,9 @@ https://stripe.com/docs/tutorials/forms
 Use this for the form
 https://stripe.com/docs/tutorials/forms
 
+
+# jQuery to show errors with bad card.
+else {
+        $("#stripe-error-message").text(response.error.message);
+        $("#credit-card-errors").show();
+        $("#user_submit").attr("disabled", false);

@@ -30,4 +30,7 @@ user =
       $('#new_user')[0].submit()
     else
       $('#stripe_error').text(response.error.message)
+      $('#stripe_error').show()
       $('input[type=submit]').attr('disabled', false)
+
+

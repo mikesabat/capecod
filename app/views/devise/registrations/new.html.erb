@@ -10,6 +10,9 @@
 
 		  <%= f.hidden_field :stripe_card_token %>
 
+		  <div id='stripe_error' class="alert alert-info" style='display:none'>
+		  </div>
+
 		  <div class='form-group'>
 		  	<%= f.label :name %>
 		  	<%= f.text_field :name, :autofocus => true, class: 'form-control' %>
