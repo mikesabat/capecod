@@ -5,7 +5,7 @@
 jQuery ->
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
   user.setupForm()
- 
+
 user =
   setupForm: ->
     $('#new_user').submit ->
