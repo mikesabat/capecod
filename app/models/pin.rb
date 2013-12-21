@@ -5,5 +5,5 @@ class Pin < ActiveRecord::Base
 	validates :description, presence: true
 
 	#Set the scope on the model instead of the controller. This seems to get rid of duplicate Pins with infinite scroll
-	self.per_page = 10
+	self.per_page = 4
 end
