@@ -4,7 +4,8 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10) #possibly lose the comma
+    #per_page => 10 sets the pins shown per page. Duplicative of setting the scope on the moded - think that is easier.
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page])#, :per_page => 10) 
     respond_to do |format|
       format.html
       format.js # add this line for your js template

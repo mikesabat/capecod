@@ -2,9 +2,6 @@
 **
 Infinite scrol partially set up from this guide http://christianvarga.com/2013/02/simple-infinite-scroll-with-rails-and-jquery/
 Problems:
-Step 2 - cannot require jquery.inview.min.js
-2nd to last step - cannot figure out how to convert index.js.haml to Javascript
-I can get the 'Load more posts' link to appear, but clicking it does nothing. 
 **
 
 //
@@ -12,16 +9,6 @@ Try 2 for endless page - using this http://stackoverflow.com/questions/18545769/
 Current Version
 //
 
-Stripe Integration - start here http://railsapps.github.io/rails-environment-variables.html
-http://blogs.clogeny.com/stripe-integration-with-rails-application/
-
-1. Adding JS to the layout file - check
-Is step 4 correct??
-**At Step 6 **
-
-Stripe tutorial*&*&&
-https://stripe.com/docs/tutorials/forms
-1. Double check step 1 - Publishable_Key there?
 
 
 
