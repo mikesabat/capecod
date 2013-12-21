@@ -1,10 +1,11 @@
-$boxes = $('<%= j render(@pins) %>')
-
+$boxes = $("<%= escape_javascript(render 'layouts/pins') %>");
+console.log($boxes);
 $('#pins').append( $boxes ).imagesLoaded( function(){
   $('#pins').masonry( 'reload');
 });
 <% if @pins.next_page %>
-  $('.pagination').replaceWith('<%= j will_paginate(@pins) %>');
+  $('.pagination').replaceWith('<%= will_paginate(@pins) %>');
 <% else %>
   $('.pagination').remove();
+  $('a.load-more-pins').remove();
 <% end %>

@@ -3,14 +3,15 @@
 
 <div class="pin-box pins" data-no-turbolink>
   <%= render 'layouts/pins' %>
-</div>
+</div> 
 
-<!-- For infinite scroll - which is not working right now.
-<%= link_to 'Load More Posts', pins_path(:page => @pins.next_page), :class => 'load-more-pins', :remote => true if @pins.next_page %>
- -->
+
+<%= link_to 'Load More Pins', pins_path(:page => @pins.next_page), :class => 'load-more-pins', :remote => true if @pins.next_page %>
+ 
 <div class='center'>
   <%= will_paginate @pins, renderer: BootstrapPagination::Rails %> 
 </div> 
+
 
 
 

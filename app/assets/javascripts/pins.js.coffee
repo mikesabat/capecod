@@ -16,9 +16,15 @@ $ ->
 	    	
 	if $('.pagination').length # Thats for the Endless Scrolling
 	    $(window).scroll ->
-	        url = $('.pagination .next_page a').attr('href')
+	        url = $('.pagination .next a').attr('href')
 	        if url && $(window).scrollTop() > $(document).height() - $(window).height() - 50
 	            # What to do at the bottom of the page
 	            $('.pagination').text("Fetching more Clips...")
 	            $.getScript(url)
-	        $(window).scroll()
+	        # $(window).scroll() #May need to comment this out if there are problems.
+
+$ ->
+  $('a.load-more-pins').on 'inview', (e, visible) ->
+    return unless visible
+    
+    $.getScript $(this).attr('href')
