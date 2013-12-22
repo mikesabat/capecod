@@ -12,11 +12,11 @@ $ ->
 	$('#pins').imagesLoaded ->
 	    $('#pins').masonry 
 	    	itemSelector: ".box" # Thats my Masonry
-	    	isFitWidth: true
+	    	#isFitWidth: true
 	    	
 	if $('.pagination').length # Thats for the Endless Scrolling
 	    $(window).scroll ->
-	        url = $('.pagination .next_page').attr('href') #next_page fixed the issue with repeating page 2
+	        url = $('.pagination .next_page').attr('href') #next_page fixed the issue with repeating page 2.
 	        if url && $(window).scrollTop() > $(document).height() - $(window).height() - 50
 	            # What to do at the bottom of the page
 	            $('.pagination').text("Fetching more Clips...")

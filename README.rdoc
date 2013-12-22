@@ -9,7 +9,10 @@ Try 2 for endless page - using this http://stackoverflow.com/questions/18545769/
 Current Version
 //
 
-
+Problems
+1. It seems that if per_page scope is less 8, the pictures repeat upon refresh.
+2. There are gaps in the masonry layout as the page gets wider
+	http://masonry.desandro.com/appendix.html#imagesloaded
 
 
 
