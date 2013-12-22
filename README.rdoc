@@ -19,4 +19,5 @@ Problems
 Next:
 Voting system?
 Upload Multiple Pics?
-Stripe Integration
+Stripe Integration - check
+

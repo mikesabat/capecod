@@ -12,7 +12,7 @@ $ ->
 	$('#pins').imagesLoaded ->
 	    $('#pins').masonry 
 	    	itemSelector: ".box" # Thats my Masonry
-	    	#isFitWidth: true
+	    	isFitWidth: true
 	    	
 	if $('.pagination').length # Thats for the Endless Scrolling
 	    $(window).scroll ->
