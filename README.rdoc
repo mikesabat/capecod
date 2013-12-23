@@ -1,22 +1,15 @@
 == README
-**
-Infinite scrol partially set up from this guide http://christianvarga.com/2013/02/simple-infinite-scroll-with-rails-and-jquery/
-Problems:
-**
 
-//
-Try 2 for endless page - using this http://stackoverflow.com/questions/18545769/will-paginate-with-endless-scrolling-rails4?rq=1
-Current Version
-//
 
 Problems
-1. It seems that if per_page scope is less 8, the pictures repeat upon refresh.
-2. There are gaps in the masonry layout as the page gets wider
+1. It seems that if per_page scope is less 8, the pictures repeat upon refresh. So the page needs to be 8 pins or more.
+2. There are gaps in the masonry layout as the page gets wider on the local host in Chrome. Things seem to work in Safari, Firefox and on heroku. 
 	http://masonry.desandro.com/appendix.html#imagesloaded
 
 
 
 Next:
+Adding stores and folders to organize pictures. 
 Voting system?
 Upload Multiple Pics?
 Stripe Integration - check
