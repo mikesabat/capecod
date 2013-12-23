@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201204846) do
+ActiveRecord::Schema.define(version: 20131223033425) do
+
+  create_table "folders", force: true do |t|
+    t.integer  "store_id"
+    t.string   "season"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pins", force: true do |t|
     t.string   "description"
@@ -22,9 +29,21 @@ ActiveRecord::Schema.define(version: 20131201204846) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "store_id"
+    t.integer  "folder_id"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
+
+  create_table "stores", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "zip"
+    t.string   "area"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
