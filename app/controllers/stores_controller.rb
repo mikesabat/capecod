@@ -18,14 +18,14 @@ class StoresController < ApplicationController
     end
   end
 
-  def index
+  def index #Do we need a store index view?
   	@stores = Store.all
   end
 
   def store_params
       # Never trust parameters from the scary internet, only allow the white list through.
       params.require(:store).permit(:name, :address, :city, :state, :zip, :area)
-    end
+  end
 
 
 end

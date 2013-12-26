@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131226041729) do
+ActiveRecord::Schema.define(version: 20131226150402) do
 
   create_table "folders", force: true do |t|
     t.integer  "store_id"
     t.string   "season"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   create_table "pins", force: true do |t|

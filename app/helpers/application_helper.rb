@@ -83,4 +83,9 @@ module ApplicationHelper
       ['Upper West', 'Upper West'],      
     ]
 	end
+
+      def stores
+            Store.all.collect {|p| ["#{p.name} - #{p.area}", p.id]} 
+            #This links the name + location of a store, to the store ID so that the view for Folders/new can have a drop down connecting the folders to the store_id
+      end
 end

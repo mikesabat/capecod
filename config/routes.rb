@@ -2,6 +2,7 @@ Capecod::Application.routes.draw do
   
   resources :pins
   resources :stores
+  resources :folders
   #resources :charges disable charge routes as those are going through user creation
 
   devise_for :users
