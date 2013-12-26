@@ -16,8 +16,13 @@
 	    <ul class="nav navbar-nav navbar-right">
 	    
 	      <% if user_signed_in? %>
-	      	<li><%= link_to new_pin_path do %>
-	      		<span class='glyphicon glyphicon-plus'></span> New Pin
+	      	<li><%= link_to new_store_path do %>
+	      		<span class='glyphicon glyphicon-map-marker'></span> New Store
+	      		<% end %>
+	      	</li>
+
+	      	<li><%= link_to new_folder_path do %>
+	      		<span class='glyphicon glyphicon-folder-open'></span> New Folder
 	      		<% end %>
 	      	</li>
 

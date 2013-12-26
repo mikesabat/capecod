@@ -11,7 +11,7 @@ class FoldersController < ApplicationController
 
   	respond_to do |format|
       if @folder.save #redirecting to root -- need to change to "add Folder"
-        format.html { redirect_to root_path, notice: 'Pin was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Folder was successfully created.' }
         format.json { render action: '#', status: :created, location: @folder }
       else
         format.html { render action: 'new' }

@@ -9,7 +9,7 @@ class StoresController < ApplicationController
 
   	respond_to do |format|
       if @store.save #redirecting to root -- need to change to "add Folder"
-        format.html { redirect_to root_path, notice: 'Pin was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Store was successfully created.' }
         format.json { render action: '#', status: :created, location: @store }
       else
         format.html { render action: 'new' }
