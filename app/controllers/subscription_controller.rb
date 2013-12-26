@@ -1,5 +1,5 @@
 class SubscriptionController < ApplicationController
-
+# I don't think we use this controller at all
 	def create
   		@subscription = Subscription.new(params[:subscription])
 		  if @subscription.save_with_payment

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223033425) do
+ActiveRecord::Schema.define(version: 20131226041729) do
 
   create_table "folders", force: true do |t|
     t.integer  "store_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20131223033425) do
     t.datetime "updated_at"
     t.integer  "zip"
     t.string   "area"
+    t.string   "state"
   end
 
   create_table "users", force: true do |t|
