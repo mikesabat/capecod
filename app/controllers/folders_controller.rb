@@ -5,6 +5,15 @@ class FoldersController < ApplicationController
 		@folder = Folder.new								
 	end
 
+  def index
+    @folders = Folder.all.order("created_at DESC")#.paginate(:page => params[:page])#, :per_page => 4) 
+    respond_to do |format|
+      format.html
+      format.js # add this line for your js template
+    end
+    
+  end
+
 	def create
 		@folder = Folder.new(folder_params)
   	@folder.save
@@ -30,12 +39,8 @@ class FoldersController < ApplicationController
     @folder = Folder.find(params[:id])
     @pin = @folder.pins.build(pin_params)
     if @pin.save
-      redirect_to folder_path(@folder), notice: 'Folder was successfully created.'
-      #render :action => :show
+      redirect_to folder_path(@folder), notice: 'Picture Was Added Successfully'
     end
-    
-    # @pin = Pin.new
-    # @pins = @folder.pins.all
   end
 
 	def folder_params

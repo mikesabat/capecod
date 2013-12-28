@@ -1,0 +1,22 @@
+
+<table class='table table-hover'>
+	<thead>
+		<tr>
+			<th>Folder Name</th>
+			<th>Cover Photo</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @folders.each do |folder| %>
+			<tr>				
+				<td><%= link_to "#{folder.season} - #{folder.store.name}", folder %></td>
+				<td><%= image_tag(folder.pins.first.image.url(:medium)) %></td>
+				
+
+			</tr>
+		<% end %>
+	</tbody>
+
+</table>
+
