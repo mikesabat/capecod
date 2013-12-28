@@ -1,4 +1,4 @@
 class Folder < ActiveRecord::Base
-	has_one :store
+	belongs_to :store
 	has_many :pins
 end

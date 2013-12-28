@@ -1,8 +1,15 @@
 Capecod::Application.routes.draw do
   
-  resources :pins
+  
   resources :stores
-  resources :folders
+  resources :folders do
+    resources :pins
+    
+    member do
+      post 'create_pin'
+    end
+  end
+
   #resources :charges disable charge routes as those are going through user creation
 
   devise_for :users
