@@ -30,7 +30,8 @@ class FoldersController < ApplicationController
     @folder = Folder.find(params[:id])
     @pin = @folder.pins.build(pin_params)
     if @pin.save
-      render :action => :show
+      redirect_to folder_path(@folder), notice: 'Folder was successfully created.'
+      #render :action => :show
     end
     
     # @pin = Pin.new
