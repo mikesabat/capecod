@@ -1,22 +1,21 @@
-
-<table class='table table-hover'>
-	<thead>
-		<tr>
-			<th>Folder Name</th>
-			<th>Cover Photo</th>
-		</tr>
-	</thead>
-
-	<tbody>
-		<% @folders.each do |folder| %>
-			<tr>				
-				<td><%= link_to "#{folder.season} - #{folder.store.name}", folder %></td>
-				<td><%= image_tag(folder.pins.first.image.url(:medium)) %></td>
-				
-
-			</tr>
-		<% end %>
-	</tbody>
-
-</table>
+<div id='pins' class='transitions-enabled'> 
+	
+	  <% @folders.each do |folder| %>
+		  	    
+	    	<div class='panel-body'>
+	        	<h3><%= folder.store.name %> - <%= folder.season %></h3> </br>
+	      	</div>
+	      	<div class='row'>	
+		      	<div class='panel'>
+		      		<div class='col-md-5 col-md-offset-2'>
+		      			<%= folder.description %>
+		      		</div>
+			    	<div class='float-right'>
+			      		<%= link_to image_tag(folder.pins.first.image.url(:medium)), folder %>
+			      	</div>	
+			    </div> 	      
+	    	</div> 
+		  
+	  <% end %>
+</div>
 

@@ -1,24 +1,12 @@
-<%= link_to 'Back', pins_path %>
-<div class='row'>
-	<div class='col-md-offset-2 col-md-8'>
-		<div class='panel panel-default'>
-			<div class='panel-heading center'>
-				<%= image_tag @pin.image.url(:medium) %>
-			</div>
-			<div class='panel-body'>
-				<p>
-				  <%= @pin.description %>
-				</p>
-				<p>Posted by <%= @pin.user.try (:name) %></p>
 
-				<% if @pin.user == current_user %>
-					<%= link_to edit_pin_path(@pin) do %> 
-						<span class='glyphicon glyphicon-edit'></span>
-						Edit
-					<% end %>
-				<% end %>
-			</div>
-		</div>
-	</div>
+			
+<div class='row' id='pins'>	
+  	<div class='panel'>
+  		<div class='col-md-4 col-md-offset-1'>
+  			<h4><%= @pin.description %></h4>
+  		</div>
+    	<div class='float-right'>
+      		<%= image_tag @pin.image.url(:medium) %>
+      	</div>	
+    </div> 	      
 </div>
-
