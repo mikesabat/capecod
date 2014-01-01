@@ -10,6 +10,7 @@ class FoldersController < ApplicationController
     respond_to do |format|
       format.html
       format.js # add this line for your js template
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page])
     end
     
   end

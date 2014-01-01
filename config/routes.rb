@@ -13,7 +13,9 @@ Capecod::Application.routes.draw do
   #resources :charges disable charge routes as those are going through user creation
 
   devise_for :users
+      
   root "folders#index"
+  
 
   get "about" => "pages#about"
 

@@ -1,21 +1,25 @@
-<div id='pins' class='transitions-enabled'> 
-	
-	  <% @folders.each do |folder| %>
-		  	    
-	    	<div class='panel-body'>
-	        	<h3><%= folder.store.name %> - <%= folder.season %></h3> </br>
-	      	</div>
-	      	<div class='row'>	
-		      	<div class='panel'>
-		      		<div class='col-md-5 col-md-offset-2'>
-		      			<%= folder.description %>
-		      		</div>
-			    	<div class='float-right'>
-			      		<%= link_to image_tag(folder.pins.first.image.url(:medium)), folder %>
-			      	</div>	
-			    </div> 	      
-	    	</div> 
-		  
-	  <% end %>
-</div>
+<% if user_signed_in? %>
+	<div id='pins' class='transitions-enabled'> 
+		
+		  <% @folders.each do |folder| %>
+			  	    
+		    	<div class='panel-body'>
+		        	<h3><%= folder.store.name %> - <%= folder.season %></h3> </br>
+		      	</div>
+		      	<div class='row'>	
+			      	<div class='panel'>
+			      		<div class='col-md-5 col-md-offset-2'>
+			      			<%= folder.description %>
+			      		</div>
+				    	<div class='float-right'>
+				      		<%= link_to image_tag(folder.pins.first.image.url(:medium)), folder %>
+				      	</div>	
+				    </div> 	      
+		    	</div> 
+			  
+		  <% end %>
+	</div>
+<% else %>
+	<%= render 'pins/index' %>
+<% end %>
 
