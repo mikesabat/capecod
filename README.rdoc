@@ -9,8 +9,22 @@ Problems
 
 
 Next:
-Adding stores and folders to organize pictures. 
+Adding stores and folders to organize pictures. Done
+Stripe Integration - check
+1. If user not signed in, need to redirect to signup_page -- https://github.com/plataformatec/devise/wiki/How-To%3A-Redirect-to-a-specific-page-when-the-user-can-not-be-authenticated
+2. Jetstrap for layouts - maybe the crumblr tutorial
+
 Voting system?
 Upload Multiple Pics?
-Stripe Integration - check
 
+
+Pulled from Pins/Index view. I need this in there for loading pins to the front page and infinite scroll.
+<!-- 
+<%= link_to #'Load More Pins', pins_path(:page => @pins.next_page), :class => 'load-more-pins', :remote => true if @pins.next_page %> -->
+<!--  
+<div class='center'>
+  <%= will_paginate @pins, #renderer: BootstrapPagination::Rails %> 
+</div> 
+ -->
+
+Want to turn this branch into a fork? Don't want to merge it back, would like it to be a separate project.

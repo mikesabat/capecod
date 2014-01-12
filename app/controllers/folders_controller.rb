@@ -1,6 +1,6 @@
 class FoldersController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
 	
-
 	def new
 		@folder = Folder.new								
 	end

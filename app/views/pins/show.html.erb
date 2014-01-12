@@ -1,10 +1,14 @@
-<div class='row' id='pins'>	
-  	<div class='panel'>
-  		<div class='col-md-4 col-md-offset-1'>
-  			<h4><%= @pin.description %></h4>
-  		</div>
-    	<div class='float-right'>
-      		<%= image_tag @pin.image.url(:medium) %>
-      	</div>	
-    </div> 	      
-</div>
+<% if user_signed_in? %>
+	<div class='row' id='pins'>	
+	  	<div class='panel'>
+	  		<div class='col-md-4 col-md-offset-1'>
+	  			<h4><%= @pin.description %></h4>
+	  		</div>
+	    	<div class='col-md-offset-4'>
+	      		<%= image_tag @pin.image.url(:medium) %>
+	      	</div>	
+	    </div> 	      
+	</div>
+<% else %>
+	<%= redirect_to "/users/sign_in" %>
+<% end %>

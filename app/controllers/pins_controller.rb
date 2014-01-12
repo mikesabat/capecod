@@ -1,7 +1,7 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index]
 
   def index
     #per_page => 10 sets the pins shown per page. Duplicative of setting the scope on the moded - think that is easier.

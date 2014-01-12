@@ -4,7 +4,7 @@
       <%= link_to image_tag(pin.image.url(:medium)), [pin.folder, pin] %>
       <div class='panel-body'>
         <%= pin.description.truncate(29) %> </br>
-        Posted by <strong><%= pin.user.try (:name) %></strong>
+        Collection: <strong><%= pin.folder.season %></strong>
         
       </div>
     </div>  
