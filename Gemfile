@@ -19,7 +19,12 @@ gem 'masonry-rails', '~>0.2.0'
 gem 'will_paginate', '~>3.0'
 gem 'will_paginate-bootstrap'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+gem 'less-rails-bootstrap', github: 'metaskills/less-rails-bootstrap', ref: 'cbe20d4593e21297f7bc3bc6bc6471a7ad18e890'
 
+gem 'pry-rails'
 
 group :development, :test do
 	gem 'sqlite3'

@@ -11,7 +11,8 @@ Problems
 Next:
 Adding stores and folders to organize pictures. Done
 Stripe Integration - check
-1. If user not signed in, need to redirect to signup_page -- https://github.com/plataformatec/devise/wiki/How-To%3A-Redirect-to-a-specific-page-when-the-user-can-not-be-authenticated
+Better Authentication - 
+1. Check pictures, so sizes make sense.
 2. Jetstrap for layouts - maybe the crumblr tutorial
 
 Voting system?
@@ -27,4 +28,5 @@ Pulled from Pins/Index view. I need this in there for loading pins to the front 
 </div> 
  -->
 
+Hacker Hours - 
 Want to turn this branch into a fork? Don't want to merge it back, would like it to be a separate project.

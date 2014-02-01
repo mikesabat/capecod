@@ -11,5 +11,8 @@
  *= require_self
  *= require 'masonry/transitions'
  *= require 'masonry/infinitescroll'
+ *= require style/bootstrap
+ *= require_tree ./style/theme/.
  *= require_tree .
  */
+
